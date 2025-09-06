@@ -2,10 +2,11 @@ import java.util.Random;
 
 public class BubbleSort {
     public static void main(String[] args) {
+        //Tamanho do vetor
         int[] numeros = new int[100];
         Random random = new Random();
 
-        // Preenche o vetor com números aleatórios entre 0 e 999
+        //Adiciona valores aleatórios a cada posição do vetor
         for (int i = 0; i < numeros.length; i++) {
             numeros[i] = random.nextInt(5000);
         }
@@ -21,6 +22,11 @@ public class BubbleSort {
     }
 
     // Método Bubble Sort
+    /*
+     * O primeiro for vai percorrer desde a primeira posição do vetor até o final.
+     * O segundo for é usado para mover os valores de posição.
+     * tamanho - 1 - i <- pois os maiores valores tendem a ficar nas últimas posições nos primeiros loops;
+     */
     public static void bubbleSort(int[] vetor) {
         int tamanho = vetor.length;
         boolean trocou;
